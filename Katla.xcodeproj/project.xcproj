@@ -43,16 +43,17 @@
       "kind": "group",
       "name": "Products",
       "children": [
-        { "path": "<PRODUCTS>/New Project.app", "id": "6FCFE669AD08195F38AEBFAD", "index": false },
-        { "path": "<PRODUCTS>/New ProjectWidget.appex", "id": "88802AB7278A74BFA2001BEF", "index": false, "target-membership": [ { "build-phase": "New Project/copy/Embed Foundation Extensions", "header-preservation": "remove-on-copy" } ] },
+        { "path": "<PRODUCTS>/Katla.app", "id": "6FCFE669AD08195F38AEBFAD", "type": "wrapper.application", "index": false },
+        { "path": "<PRODUCTS>/Katla Widget Extension.appex", "id": "88802AB7278A74BFA2001BEF", "type": "wrapper.app-extension", "index": false, "target-membership": [ { "build-phase": "New Project/copy/Embed Foundation Extensions", "header-preservation": "remove-on-copy" } ] },
       ],
     },
+    { "kind": "folder", "path": "Shared", "target-membership": [ "New Project", "New ProjectWidget" ] },
   ],
   "targets": [
     {
       "name": "New Project",
       "id": "DABFF7B1B589EBC2B3F90E6E",
-      "product": "Products/New Project.app",
+      "product": "Products/Katla.app",
       "product-type": "application",
       "legacy-provisioning-style": "automatic",
       "dependencies": [
@@ -72,7 +73,11 @@
         "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor",
         "CODE_SIGN_IDENTITY": "iPhone Developer",
         "CURRENT_PROJECT_VERSION": "1",
+        "DEVELOPMENT_TEAM": "3RQG7N49WW",
+        "GENERATE_INFOPLIST_FILE": "YES",
         "INFOPLIST_FILE": "App/Info.plist",
+        "INFOPLIST_KEY_CFBundleDisplayName": "Katla",
+        "INFOPLIST_KEY_LSApplicationCategoryType": "public.app-category.reference",
         "IPHONEOS_DEPLOYMENT_TARGET": "26.0",
         "LD_RUNPATH_SEARCH_PATHS": [
           "$(inherited)",
@@ -80,7 +85,7 @@
         ],
         "MARKETING_VERSION": "1.0",
         "PRODUCT_BUNDLE_IDENTIFIER": "app.bitrig.new.0d956398-1e3d-49f2-8c71-cecc1f4f9849",
-        "PRODUCT_NAME": "$(TARGET_NAME)",
+        "PRODUCT_NAME": "Katla",
         "SDKROOT": "iphoneos",
         "SWIFT_VERSION": "5.0",
         "TARGETED_DEVICE_FAMILY": "1,2",
@@ -88,7 +93,7 @@
     }, {
       "name": "New ProjectWidget",
       "id": "6C0E67591056647983A2597C",
-      "product": "Products/New ProjectWidget.appex",
+      "product": "Products/Katla Widget Extension.appex",
       "product-type": "app-extension",
       "legacy-provisioning-style": "automatic",
       "build-phases": [
@@ -98,7 +103,10 @@
       "build-settings": {
         "APPLICATION_EXTENSION_API_ONLY": "YES",
         "CURRENT_PROJECT_VERSION": "1",
+        "DEVELOPMENT_TEAM": "3RQG7N49WW",
+        "GENERATE_INFOPLIST_FILE": "YES",
         "INFOPLIST_FILE": "Widget/Info.plist",
+        "INFOPLIST_KEY_CFBundleDisplayName": "Katla Widget Extension",
         "IPHONEOS_DEPLOYMENT_TARGET": "26.0",
         "LD_RUNPATH_SEARCH_PATHS": [
           "$(inherited)",
@@ -106,12 +114,12 @@
           "@executable_path/../../Frameworks",
         ],
         "MARKETING_VERSION": "1.0",
-        "PRODUCT_BUNDLE_IDENTIFIER": "app.bitrig.new.0d956398-1e3d-49f2-8c71-cecc1f4f9849.widget",
-        "PRODUCT_NAME": "$(TARGET_NAME)",
+        "PRODUCT_BUNDLE_IDENTIFIER": "app.bitrig.new.0d956398-1e3d-49f2-8c71-cecc1f4f9849.widget-extension",
+        "PRODUCT_NAME": "Katla Widget Extension",
         "SDKROOT": "iphoneos",
         "SKIP_INSTALL": "YES",
         "SWIFT_VERSION": "5.0",
-        "TARGETED_DEVICE_FAMILY": "1",
+        "TARGETED_DEVICE_FAMILY": "1,2",
       },
     },
   ],
